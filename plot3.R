@@ -26,7 +26,7 @@ epc_plot$Global_reactive_power <- as.numeric(epc_plot$Global_reactive_power)
 # Making Plot
 ################################################################################################
 # Plot3
-png(file = "plot3.png", width = 480, height = 480, units = "px")
+png(file = "plot3.png", width = 480, height = 480, units = "px", bg = "transparent")
 with(epc_plot, plot(date_time, Sub_metering_1, type = "l", ylab = "Energy sub metering", xlab = ""))
 with(epc_plot, lines(date_time, Sub_metering_2, type = "l", col = "red"))  
 with(epc_plot, lines(date_time, Sub_metering_3, type = "l", col = "blue"))

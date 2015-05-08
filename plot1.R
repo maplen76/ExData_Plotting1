@@ -27,7 +27,7 @@ epc_plot$Global_reactive_power <- as.numeric(epc_plot$Global_reactive_power)
 ################################################################################################
 
 # Plot1
-png(file = "plot1.png", width = 480, height = 480, units = "px")
+png(file = "plot1.png", width = 480, height = 480, units = "px", bg = "transparent")
 hist(as.numeric(epc_plot$Global_active_power), 
      col = "red"
      ,main = "Global Active Power"

@@ -27,7 +27,7 @@ epc_plot$Global_reactive_power <- as.numeric(epc_plot$Global_reactive_power)
 ################################################################################################
 
 #Plot4
-png(file = "plot4.png", width = 480, height = 480, units = "px")
+png(file = "plot4.png", width = 480, height = 480, units = "px", bg = "transparent")
 par(mfrow = c(2, 2))
 with(epc_plot,{ 
   plot(date_time, Global_active_power, type = "l",  ylab = "Global Active Power", xlab = "")
@@ -36,6 +36,6 @@ with(epc_plot,{
   lines(date_time, Sub_metering_2, type = "l", col = "red")
   lines(date_time, Sub_metering_3, type = "l", col = "blue")
   legend("topright", bty = 'n', lty=c(1,1), col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-  plot(date_time, as.numeric(Global_reactive_power), type = "l", ylab = "Global_reactive_power" )
+  plot(date_time, as.numeric(Global_reactive_power), type = "l", ylab = "Global_reactive_power", xlab = "datetime")
 })
 dev.off()
