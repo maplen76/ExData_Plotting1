@@ -28,5 +28,5 @@ epc_plot$Global_reactive_power <- as.numeric(epc_plot$Global_reactive_power)
 
 # Plot2
 png(file = "plot2.png", width = 480, height = 480, units = "px", bg = "transparent")
-with(epc_plot, plot(date_time, Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)", xlab = ""))
+with(epc_plot, plot(date_time, Global_active_power, type = "l", ylab = "Global Active Power (kilowatts)", xlab = "",xaxt = 's' ))
 dev.off()
